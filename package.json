@@ -1,0 +1,25 @@
+{
+  "name": "cont",
+  "version": "0.1.0",
+  "main": "lib/js/src/index.js",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "pretest": "yarn run build",
+    "test": "jest",
+    "watch": "bsb -make-world -w"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "license": "MIT",
+  "jest": {
+    "roots": [
+      "lib/js/src"
+    ]
+  },
+  "devDependencies": {
+    "bs-jest": "^0.3.2",
+    "bs-platform": "^2.1.0"
+  }
+}
