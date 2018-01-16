@@ -4,14 +4,12 @@
   "main": "lib/js/src/index.js",
   "scripts": {
     "clean": "bsb -clean-world",
+    "prebuild": "yarn run clean",
     "build": "bsb -make-world",
     "pretest": "yarn run build",
     "test": "jest",
-    "watch": "bsb -make-world -w"
+    "start": "bsb -make-world -w"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
   "license": "MIT",
   "jest": {
     "roots": [
@@ -20,6 +18,8 @@
   },
   "devDependencies": {
     "bs-jest": "^0.3.2",
-    "bs-platform": "^2.1.0"
+    "bs-platform": "^2.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }
